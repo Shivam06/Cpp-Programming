@@ -1,2 +1,4 @@
 *.out
 .vscode/
+-Wno-atomic-implicit-seq-cst
+*.dSYM
