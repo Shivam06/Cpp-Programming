@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<algorithm>
 using namespace std;
 
 int i = 0;
@@ -50,5 +51,15 @@ int main() {
     vector<vector<int> > matrix(N, vector<int>(M, -1));
 
     printVector(matrix);
+
+    // Vector manipulation
+    v.push_back(3);
+    v.push_back(5);
+    v.insert(v.begin()+1, 2);
+    printVector(v);
+
+    v.erase(v.begin(),v.begin()+2);
+    printVector(v);
+    
 }
 
