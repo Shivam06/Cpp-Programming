@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 
+// Code to find GCD of 2 numbers.
 int gcd(int a, int b) {
     if (b == 0)
         return a;
