@@ -27,6 +27,13 @@ void rotateArr(int arr[], int d, int n){
     
 }
 
+// Very nice approach.
+void rotateArr2(int arr[], int d, int n) {
+    reverse(arr, arr+d);
+    reverse(arr + d, arr+n);
+    reverse(arr, arr + n);
+}
+
 void print_arr(int arr[], int n) {
 	for (int i = 0; i < n; i++) {
 		cout << arr[i] << " ";
@@ -38,7 +45,7 @@ int main() {
 	int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
 	int d = 3;
 	int n = 12;
-	rotateArr(arr, d, n);
+	rotateArr2(arr, d, n);
 
 	print_arr(arr, n);
 }
