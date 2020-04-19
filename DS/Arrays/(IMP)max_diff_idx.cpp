@@ -5,7 +5,11 @@ using namespace std;
 int max_e = 1;
 
 bool compare_function(int a, int b) {
-	return a%max_e <= b%max_e;
+
+	if (a%max_e == b%max_e) {
+		return a/max_e < b/max_e;
+	}
+	return a%max_e < b%max_e;
 }
 
 int max_diff(vi v) {
@@ -24,30 +28,20 @@ int max_diff(vi v) {
 		v[i] = v[i]/max_e;
 	}
 
-	//print_container(v);
+	int maxDiff = -1;  
+  
+    rloop(i, n-2) {
+       int diff = v[i+1] - v[i];
+       maxDiff = max(maxDiff, diff);
+       v[i] = max(v[i+1], v[i]);
+    }
 
-	int max_diff = 0;
-
-
-	int temp[n];
-	temp[n-1] = v[n-1];
-
-	rloop(i, n-2) {
-		temp[i] = max(v[i], temp[i+1]);
-	}
-
-	int ans = INT_MIN;
-	loop(i, n) {
-		ans = max(ans, temp[i] - v[i]);
-	}
-
-	return ans;
+	return maxDiff;
 }
 
 int main() {
 
-	vi v{3,4,4,3,5};
+	vi v{5,3,4,4,3,2};
 	cout << max_diff(v) << endl;
-	//print_container(v);
 	return 0;
 }
