@@ -4,6 +4,7 @@ using namespace std;
 
 typedef vector<int> vi;
 typedef pair<int, int> ii;
+typedef vector<pair<int,int> > vii;
 
 #define all(c) c.begin(), c.end()
 #define present(c, e) (c.find(e) != c.end())
