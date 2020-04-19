@@ -12,6 +12,10 @@ bool compare_function(int a, int b) {
 	return a%max_e < b%max_e;
 }
 
+// Time - O(nLogn)
+// Space - O(1)
+// Other ways - 
+// O(n) and O(n) resp.
 int max_diff(vi v) {
 
 	int n = v.size();
