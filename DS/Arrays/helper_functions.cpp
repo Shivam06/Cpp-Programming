@@ -3,6 +3,7 @@
 using namespace std;
 
 typedef vector<int> vi;
+typedef vector<vector<int> > vvi;
 typedef pair<int, int> ii;
 typedef vector<pair<int,int> > vii;
 
