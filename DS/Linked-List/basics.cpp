@@ -32,21 +32,22 @@ void add(Node* head, int x) {
 	newNode->next = nxt;
 }
 
-void delete_node(Node*& head) {
+Node* delete_node(Node*& head) {
 	if (head == NULL)
-		return;
+		return head;
 
 	if(head->next == NULL) {
 		Node* temp = head;
 		head = NULL;
 		delete temp;
-		return;
+		return head;
 	}
 
 	head->data = head->next->data;
 	Node* temp = head->next;
 	head->next = head->next->next;
 	delete temp;
+	return head;
 }
 
 Node* inputLL(vi& v) {

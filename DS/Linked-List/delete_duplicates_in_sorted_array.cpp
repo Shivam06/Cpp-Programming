@@ -8,9 +8,7 @@ void delete_duplicates(Node* head) {
 	Node* prev = NULL;
 	while (temp != NULL) {
 		if (temp->data == x) {
-			if (temp->next == NULL)
-				prev->next = NULL;
-			delete_node(temp);
+			prev->next = delete_node(temp);
 			continue;
 		}
 
