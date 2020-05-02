@@ -13,6 +13,24 @@ struct Node {
 	}
 };
 
+Node* find_middle(Node* head) {
+	Node* slow = head, *fast = head;
+	if (head == NULL)
+		return head;
+
+	while (fast->next != NULL && fast->next->next != NULL) {
+		slow = slow->next;
+		fast = fast->next->next;
+	}
+	return slow;
+}
+
+void add(Node* head, int x) {
+	Node* newNode = new Node(x);
+	nnext(nxt, head);
+	head->next = newNode;
+	newNode->next = nxt;
+}
 
 Node* inputLL(vi& v) {
 	Node* head = NULL;
@@ -39,9 +57,10 @@ Node* inputLL(vi& v) {
 
 void printLL(Node* head) {
 	while (head != NULL) {
-		cout << head->data << endl;
+		cout << head->data << " ";
 		next(head);
 	}
+	cout << endl;
 }
 
 int len(Node* head) {
