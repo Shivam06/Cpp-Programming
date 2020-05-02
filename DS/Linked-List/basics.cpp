@@ -1,6 +1,7 @@
 #include "../../helper_functions.cpp"
 
 #define next(h) h = h->next;
+#define nnext(n,h) Node* n = h->next;
 
 struct Node {
 	int data;
@@ -55,10 +56,10 @@ int len(Node* head) {
 	return count;
 }
 
-int main() {
+// int main() {
 
-	vi v{{1,2,3,4,5}};
-	Node* head = inputLL(v);
-	printLL(head);
-	cout << "Lenght is " << len(head) << endl;
-}
+// 	vi v{{1,2,3,4,5}};
+// 	Node* head = inputLL(v);
+// 	printLL(head);
+// 	cout << "Lenght is " << len(head) << endl;
+// }
