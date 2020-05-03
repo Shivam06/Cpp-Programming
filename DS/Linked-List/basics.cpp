@@ -81,7 +81,7 @@ void printLL(Node* head) {
 	cout << endl;
 }
 
-int len(Node* head) {
+int length(Node* head) {
 	
 	int count = 0;
 	while (head != NULL) {
