@@ -74,9 +74,11 @@ Node* inputLL(vi& v) {
 }
 
 void printLL(Node* head) {
-	while (head != NULL) {
+	int count = 0;
+	while (head != NULL && count < 20) {
 		cout << head->data << " ";
 		next(head);
+		count++;
 	}
 	cout << endl;
 }
