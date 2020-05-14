@@ -1,0 +1,19 @@
+
+Works for :
+	
+	T(n) = aT(n/b) + f(n) where f(n) is of form O(n^d)
+
+
+if a < b^d:
+	T(n) = O(n^d)
+
+if a == b^d:
+	T(n) = O(n^d*Log(n))
+
+if a > b^d:
+	T(n) = O(n^(Loga base b)
+
+
+It doesn't work for any other form. Eg it doesn't work for fibonacci where 
+T(n) = T(n-1) + T(n-2) since there is no b.
+
