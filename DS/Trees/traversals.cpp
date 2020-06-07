@@ -47,18 +47,18 @@ void preorder_itr(Node* head) {
 
 }
 
-int main() {
-	Node* head = default_input();
-	cout << "PREODER RECURSIVE: "<<endl;
-	preorder(head);
-	cout << endl;
-	cout << "PREORDER ITERATIVE: " << endl;
-	preorder_itr(head);
-	cout << endl;
-	cout << "INORDER: " << endl;
-	inorder(head);
-	cout << endl;
-	cout << "POSTORDER: " << endl;
-	postorder(head);
-	cout << endl;
-}
+// int main() {
+// 	Node* head = default_input();
+// 	cout << "PREODER RECURSIVE: "<<endl;
+// 	preorder(head);
+// 	cout << endl;
+// 	cout << "PREORDER ITERATIVE: " << endl;
+// 	preorder_itr(head);
+// 	cout << endl;
+// 	cout << "INORDER: " << endl;
+// 	inorder(head);
+// 	cout << endl;
+// 	cout << "POSTORDER: " << endl;
+// 	postorder(head);
+// 	cout << endl;
+// }
