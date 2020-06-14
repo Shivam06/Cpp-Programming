@@ -29,6 +29,24 @@ void postorder(Node* head) {
 	cout << head->data << " ";
 }
 
+void inorder_itr(Node* head) {
+	stack<Node*> s;
+	Node* cur = head;
+
+	do {
+		while (cur != NULL) {
+			s.push(cur);
+			cur = cur->left;
+		}
+
+		cur = s.top();
+		s.pop();
+		cout << cur->data << " ";
+
+		cur = cur->right;
+	} while (cur != NULL || !s.empty());
+}
+
 void preorder_itr(Node* head) {
 
 	stack<Node*> s;
