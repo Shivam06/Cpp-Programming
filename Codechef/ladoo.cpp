@@ -1,6 +1,4 @@
 #include <iostream>
-#include <bits/stdc++.h>
-#include <boost/algorithm/string.hpp>
 #include<string>
 using namespace std;
 
