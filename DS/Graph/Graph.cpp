@@ -9,7 +9,7 @@ class Graph {
 			this->add_directed_edge(b,a,w);
 		}
 
-		virtual void add_directed_edge(int a, int b, int w = 0) = 0;
+		virtual void add_directed_edge(int a, int b, int w = 1) = 0;
 
 		virtual void print() = 0;
 };
