@@ -12,4 +12,5 @@ class Graph {
 		virtual void add_directed_edge(int a, int b, int w = 1) = 0;
 
 		virtual void print() = 0;
+
 };
