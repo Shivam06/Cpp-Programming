@@ -2,10 +2,7 @@
 #include<queue>
 
 
-void bfs(AdjacencyGraph graph, int s, vector<bool>& visited) {
-
-	vector<vector<int> > adj = graph.get_graph();
-	
+void bfs(vector<vector<int> > adj, int s, vector<bool>& visited) {
 	
 	queue<int> q;
 	if (visited[s])
@@ -31,7 +28,7 @@ void bfs(AdjacencyGraph graph) {
 
 	vector<bool> visited(graph.get_vertices_count(), false);
 	for (int i = 0; i < graph.get_vertices_count(); i++) {
-		bfs(graph, i, visited);
+		bfs(graph.get_graph(), i, visited);
 	}	
 }
 
