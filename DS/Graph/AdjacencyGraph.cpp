@@ -1,6 +1,7 @@
 #include<iostream>
 #include<vector>
 #include "Graph.cpp"
+#include<queue>
 using namespace std;
 
 class AdjacencyGraph : public Graph {
@@ -50,6 +51,19 @@ AdjacencyGraph get_default_input() {
 	graph.add_directed_edge(2,3);	
 	return graph;
 }
+
+AdjacencyGraph get_dag_input() {
+	AdjacencyGraph graph(6);
+	graph.add_directed_edge(2,1);
+	graph.add_directed_edge(0,1);
+	graph.add_directed_edge(1,3);
+	graph.add_directed_edge(1,4);
+	graph.add_directed_edge(3,5);
+	graph.add_directed_edge(4,5);
+	return graph;
+}
+
+
 // int main() {
 // 	AdjacencyGraph graph(5);
 // 	graph.add_directed_edge(0,1);
